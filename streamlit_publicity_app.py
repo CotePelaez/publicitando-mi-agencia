@@ -10,7 +10,7 @@ st.markdown("""
         color: white;
         font-size: 34px;
         height: 50px;
-        width: 340px;
+        width: 140px;
         border-radius: 10px;
     }
     </style>
@@ -86,7 +86,7 @@ for i in range(0, len(trips), 2):
                 st.image(trips[i + j]["image"], use_column_width=True)
                 st.subheader(trips[i + j]["name"])
                 st.write(trips[i + j]["description"])
-                if st.button(f"Estoy interesado en {trips[i + j]['name']}", key=f"btn_{i+j}"):
+                if st.button(f"Estoy interesado", key=f"btn_{i+j}"):
                     if send_email(
                         subject=f"Interés en {trips[i + j]['name']}",
                         message=f"Estoy interesado en el {trips[i + j]['name']}.",
